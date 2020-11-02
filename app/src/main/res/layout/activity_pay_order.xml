@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PayOrder">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/header">
+
+
+        <TextView
+            android:textColor="#44594D"
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:layout_height="wrap_content"
+            android:text="Binus EzyFoody"
+            android:textStyle="bold"
+            android:textSize="10pt"
+            />
+
+
+    </GridLayout>
+
+
+
+    <TextView
+        android:id="@+id/myordertext"
+        android:layout_below="@id/header"
+        android:textColor="#44594D"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:background="#F6BFA3"
+        android:text="My Order"
+        android:textStyle="bold"
+        android:textSize="10pt"
+        />
+
+    <TextView
+        android:layout_below="@id/myordertext"
+        android:background="#EEF7F0"
+        android:id="@+id/finishtext"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:textSize="12pt"
+        android:gravity="center_vertical|center_horizontal"
+        android:textColor="#44594D"
+        android:textStyle="bold"
+        android:text="You have paid for your order, Thank You!"
+         />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recyclervieowrder"
+        android:layout_below="@id/finishtext"
+        />
+
+
+    <RelativeLayout
+        android:layout_below="@id/recyclervieowrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/total">
+
+        <TextView
+            android:layout_marginVertical="50dp"
+            android:id="@+id/totalorder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="8pt"
+            android:gravity="right"
+            android:textColor="#44594D"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            android:text="Total : Rp.155.000"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/total"
+        android:gravity="bottom|right"
+        >
+
+        <Button
+            android:id="@+id/doneorder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DONE"
+            android:layout_margin="40dp"
+            />
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
